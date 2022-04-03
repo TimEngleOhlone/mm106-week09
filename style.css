@@ -1,0 +1,104 @@
+html {
+    margin: 0;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+
+body {
+    margin: 0;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+
+:root {
+    --sky-color: #5a7ff7;
+    --grass-color: rgb(36, 80, 36);
+    --road-color: #636060;
+    --warning-color: rgb(87, 5, 5);
+    --text-family:  'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.sky {
+    position: relative;
+    height: 40%;
+    background: var(--sky-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.prompt {
+    font-family: var(--text-family);
+    font-size: 3em;
+    text-align: center;
+}
+
+.warning {
+    text-align: center;
+    font-family: var(--text-family);
+    color: var(--warning-color);
+    font-size: 2em;
+}
+
+.grass {
+    position: relative;
+    height: 30%;
+    background:var(--grass-color) ;
+}
+
+.road {
+    position: relative;
+    box-sizing: border-box;
+    height: 30%;
+    background-color: var(--road-color);
+    border-top: 10px solid grey;
+    border-bottom: 10px solid grey;
+}
+
+.lines {
+    box-sizing: border-box;
+    border: 5px dashed white;
+    height: 0px;
+    width: 100%;
+    top: 45%;
+    position: absolute;
+}
+
+/* Elements for animation */
+
+.lily {
+    position: absolute;
+    top: -20px;
+    left: 0px;
+    animation-name: walk;
+    animation-duration: 20s;
+animation-delay: 2s;
+    animation-fill-mode: forwards;
+}
+
+.turtle {
+    position: absolute;
+    top:120px;
+    left: 0px;
+    /* animation-name: walk-turtle;
+    animation-duration: 12s;
+    animation-fill-mode: forwards; */
+}
+
+.turtle:hover {
+    animation-name: walk-turtle;
+    animation-duration: 15s;
+    animation-fill-mode: forwards;
+}
+/* Keyframes */
+
+@keyframes walk {
+    from { transform: translateX(0);}
+    to{transform: translateX(1400px);}
+}
+
+@keyframes walk-turtle {
+    from { transform: translateX(0);}
+    to{transform: translateX(1400px);}
+}
